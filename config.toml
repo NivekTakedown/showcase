@@ -1,4 +1,4 @@
-baseURL = "https://nivektakedown.github.io/VisualComputing"
+baseURL = "https://nivektakedown.github.io/showcase"
 languageCode = "en-us"
 title = "Showcase Template"
 theme = 'book'

@@ -1,4 +1,4 @@
-baseURL = "https://github.com/NivekTakedown/showcase.git"
+baseURL = "https://grupoCaKe/visualcomputing.github.io/showcase"
 languageCode = "en-us"
 title = "Showcase Template"
 theme = 'book'
@@ -22,7 +22,7 @@ enableGitInfo = true
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://grupoCaKe/visualcomputing.github.io/showcase'
+  BookRepo = 'https://github.com/NivekTakedown/showcase.git'
 
   # Configure the date format used on the pages
   # - In git information

@@ -213,7 +213,7 @@ Look at [this reference](https://www.alamy.es/ilustracion-grafica-3d-imagen-de-e
   }
 {{< /p5-global-iframe >}}
 
-## Widget example
+## Prieba online
 
 {{< details title="p5-widget markdown" open=false >}}
 {{< highlight html >}}

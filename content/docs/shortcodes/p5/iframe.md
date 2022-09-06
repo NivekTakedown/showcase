@@ -214,46 +214,6 @@ En este lugar se puede encontrar la ilusión óptica original: [this reference](
 {{< /p5-global-iframe >}}
 
 ## Prueba online
-
-{{< details title="p5-widget markdown" open=false >}}
-{{< highlight html >}}
-{{</* p5-widget autoplay=true height="400" width="400" ver="1.4.2" >}}
-  let h;
-  let w;
-  let perc1;
-  let perc2;
-  let perc3;
-  function setup() {
-    createCanvas(400, 400);
-    h=float(0.9);
-    w=float(width/2);
-    perc1=0.05;
-    perc2=0.0125;
-    perc3=0.1;
-  }
-
-  function draw() {
-    background(220);
-    let num = 26;
-    let num1 = 1;
-    while (num > 0) {
-      if (num % 2==0) {
-        fill(0,0,0);
-      } else {
-        fill(255,255,255)
-      }
-      num = num - 1;
-      square(w*0.0125+w+perc1*w*num1/30,w*perc2+w+perc1*w*num1/30,w*h-num1);
-      square(-w*perc2+(1-h)*w+perc3*w*num1/30,+w*perc2+w+perc1*w*num1/30,w*h-num1);
-      square(w*perc2+w+perc1*w*num1/30,+w*0.085+perc3*w*num1/30,w*h-num1);
-      square(-w*perc2+(1-h)*w+perc3*w*num1/30,+w*0.085+perc3*w*num1/30,w*h-num1);
-      num1 = num1+ 7;
-    }
-  }
-{{< /p5-widget */>}}
-{{< /highlight >}}
-{{< /details >}}
-
 {{< p5-widget autoplay=true height="400" width="400" ver="1.4.2" >}}
   let h;
   let w;

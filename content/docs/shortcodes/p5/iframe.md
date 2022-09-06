@@ -2,7 +2,7 @@
 
 Look at [this reference](https://en.wikipedia.org/wiki/Optical_illusion) for an explanation and further parameterization of the illusion.
 
-{{< details title="p5-global-iframe markdown" open=false >}}
+{{< details title="Codigo moving picture" open=false >}}
 {{< highlight html >}}
 {{</* p5-global-iframe id="breath" width="625" height="625" >}}
   // Coded as `global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js)

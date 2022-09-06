@@ -142,8 +142,8 @@ En este lugar se puede encontrar la ilusión óptica original: [this reference](
 {{< highlight html >}}
 {{</* p5-global-iframe id="breath" width="625" height="625" >}}
   // Coded as `global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js)
-  let h;
   let w;
+  let h;
   let perc1;
   let perc2;
   let perc3;

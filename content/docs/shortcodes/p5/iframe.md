@@ -134,9 +134,9 @@ function cuadro(x,y,ct){
   line(x,y+ct,x+ct,y);
 }
 {{< /p5-global-iframe >}}
-## Breathing square
+## Estrella
 
-Look at [this reference](https://michaelbach.de/ot/mot-breathingSquare/) for an explanation and further parameterization of the illusion.
+Look at [this reference](https://www.alamy.es/ilustracion-grafica-3d-imagen-de-estrella-de-la-ilusion-optica-hecha-de-cuadrados-de-color-arco-iris-3d-image402311367.html) for an explanation and further parameterization of the illusion.
 
 {{< details title="p5-global-iframe markdown" open=false >}}
 {{< highlight html >}}

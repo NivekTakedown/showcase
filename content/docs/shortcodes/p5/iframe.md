@@ -136,7 +136,7 @@ function cuadro(x,y,ct){
 {{< /p5-global-iframe >}}
 ## Estrella
 
-Look at [this reference](https://www.alamy.es/ilustracion-grafica-3d-imagen-de-estrella-de-la-ilusion-optica-hecha-de-cuadrados-de-color-arco-iris-3d-image402311367.html) for an explanation and further parameterization of the illusion.
+En este lugar se puede encontrar la ilucion optica original: [this reference](https://www.alamy.es/ilustracion-grafica-3d-imagen-de-estrella-de-la-ilusion-optica-hecha-de-cuadrados-de-color-arco-iris-3d-image402311367.html) 
 
 {{< details title="código estrella" open=false >}}
 {{< highlight html >}}

@@ -1,6 +1,6 @@
 ## Moving picture
 
-Look at [this reference](https://michaelbach.de/ot/mot-breathingSquare/) for an explanation and further parameterization of the illusion.
+Look at [this reference](https://en.wikipedia.org/wiki/Optical_illusion) for an explanation and further parameterization of the illusion.
 
 {{< details title="p5-global-iframe markdown" open=false >}}
 {{< highlight html >}}

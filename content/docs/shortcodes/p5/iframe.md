@@ -136,7 +136,7 @@ function cuadro(x,y,ct){
 {{< /p5-global-iframe >}}
 ## Estrella
 
-En este lugar se puede encontrar la ilucion optica original: [this reference](https://www.alamy.es/ilustracion-grafica-3d-imagen-de-estrella-de-la-ilusion-optica-hecha-de-cuadrados-de-color-arco-iris-3d-image402311367.html) 
+En este lugar se puede encontrar la ilusión óptica original: [this reference](https://www.alamy.es/ilustracion-grafica-3d-imagen-de-estrella-de-la-ilusion-optica-hecha-de-cuadrados-de-color-arco-iris-3d-image402311367.html) 
 
 {{< details title="código estrella" open=false >}}
 {{< highlight html >}}
@@ -213,7 +213,7 @@ En este lugar se puede encontrar la ilucion optica original: [this reference](ht
   }
 {{< /p5-global-iframe >}}
 
-## Prieba online
+## Prueba online
 
 {{< details title="p5-widget markdown" open=false >}}
 {{< highlight html >}}

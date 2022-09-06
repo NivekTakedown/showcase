@@ -9,5 +9,6 @@ headless: true
 - [Hints]({{< relref "/docs/shortcodes/hints" >}})
 - [Katex]({{< relref "/docs/shortcodes/katex" >}})
 - [Mermaid]({{< relref "/docs/shortcodes/mermaid" >}})
-- [Tabs]({{< relref "/docs/shortcodes/tabs" >}})
+- [T]({{< relref "/docs/shortcodes/tabs" >}})
+- [Taller1]({{< relref "/docs/shortcodes/taller1" >}})
 <br />

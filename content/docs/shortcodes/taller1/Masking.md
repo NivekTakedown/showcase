@@ -1,4 +1,14 @@
-## Moving picture
+## Masking
+Un kernel es una mask que se usa para aplicar filtros a una imagen. Estas máscaras tienen forma de matriz cuadrada, por lo que también se denominan matrices de convolución.
+
+Consideremos la matriz A, que representa la matriz que contiene los valores de gris de todos los píxeles de la imagen original, y la matriz B que representa la matriz kernel. Ahora superpongamos la matriz A con la matriz B, de modo que el centro de la matriz B corresponda al píxel de la matriz A que se procesará.
+
+El valor de la imagen objetivo (matriz C) se calcula como la suma de todos los elementos de la matriz resultante del producto de Hadamard entre las matrices A y B.
+
+Recordamos que el producto de Hadamard es una operación binaria que toma dos matrices de la misma dimensione y produce otra matriz de igual dimensión, donde cada elemento i , j es el producto de los elementos i , j de las dos matrices originales
+
+**Ejemplo gŕafico -** Operación de convolución de una imagen con el kernel de Sharpen:
+<img src="https://www.opto-e.com/basics/media/basics/software/3D_Convolution_Animation.gif" alt="Convolution" style="height: 390px; width:345px; margin: 30px auto; display: block;"/>
 
 Look at [this reference](https://en.wikipedia.org/wiki/Optical_illusion) for an explanation and further parameterization of the illusion.
 
@@ -199,4 +209,154 @@ function draw(){
     canva();
   }
 }
+{{< /p5-global-iframe >}}
+## Masking
+
+Look at [this reference](https://en.wikipedia.org/wiki/Optical_illusion) for an explanation and further parameterization of the illusion.
+
+{{< details title="código moving picture" open=false >}}
+{{< highlight html >}}
+{{</* p5-global-iframe id="breath" width="800" height="600" >}}
+  // Coded as `global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js)
+
+{{< /p5-global-iframe */>}}
+{{< /highlight >}}
+{{< /details >}}
+
+{{< p5-global-iframe id="breath" width="800" height="600" >}}
+let img; let img1;let img2;let img3;let img4;let img5;
+let palette;
+let rojo; let verde;let azul;
+let r;let g;let b;let t;
+let tab1; 
+let selec1;
+let tab2; 
+let selec2;
+
+function preload(){
+    img1 = loadImage('/content/images/img1.jpg');
+    img2 = loadImage('/content/docs/images/img2.png');
+    img3 = loadImage('/content/docs/images/img3.jpeg');
+    img4 = loadImage('/content/docs/images/img4.png');
+    img5 = loadImage('/content/docs/images/imgp.png');
+}
+
+function setup() {
+  createCanvas(600, 1300);
+  tab1= createSelect();
+  tab1.position(10, 10);
+  tab1.option('Imagen');
+  tab1.option('-img1');
+  tab1.option('-img2');
+  tab1.option('-img3');
+  tab1.option('-img4');
+  tab1.option('-img5');
+  tab1.changed(pickEvent1);
+  /*
+  tab2= createSelect();
+  tab2.position(30, 30);
+  tab2.option('Histogram');
+  tab2.option('-red');
+  tab2.option('-blue');
+  tab2.option('-green');
+  tab2.option('-todos');
+  //tab2.changed(pickEvent2);
+  */
+  img = img1;
+  img.resize(600,400);
+  rojo = color(255,0,0);
+  verde = color(0,255,0);
+  azul = color(0,0,255);
+  palette =[rojo,verde,azul];
+  //noLoop();
+}
+function pickEvent1() {
+    select1 = tab1.value();    
+    if (selec1 === '-img1') {
+        img = img1;
+    } else if (selec1 === '-img2') {
+        img = img2;
+    } else if (selec1 === '-img3') {
+        img = img3;
+    } else if (selec1 === '-img4') {
+        img = img4;
+    } else if (selec1 === '-img5') {
+        img = img5;
+    } 
+}
+
+/*
+function pickEven2() {
+    selec = tab.value();    
+    if (selec === '-gris') {
+        selec = 1;
+    } else if (selec === '-invert') {
+        selec = 2;
+    } else if (selec === '-threshold') {
+        selec = 3;
+    } else if (selec === '-blur') {
+        selec = 4;
+    } else if (selec === '-erode') {
+        selec = 5;
+    } else if (selec === '-dilate') {
+        selec = 6;
+    } else if (selec === '-sin filtro') {
+        selec = 0;
+    }
+}*/
+function draw() {
+  background(220);
+  image(img,0,400,600,400);
+  t=850;
+  for(let y=0;y<400;y++){
+    r = 0;g = 0;b=0;
+    for(let x=0;x<600;x++){
+      const imgColor = img.get(x,y);
+      const paletteColor = getPalletteColor(imgColor);
+      if (paletteColor === rojo){
+          r=r+1;
+      }
+      else if (paletteColor === verde){
+          g=g+1;
+      }
+      else if (paletteColor === azul){
+          b=b+1;
+      }
+      stroke(paletteColor);
+      point(x,y);
+    }
+    t=t+1;
+    histograma(r,g,b,t);
+  }
+}
+
+function getPalletteColor(imgColor){
+  const imgR = red(imgColor);
+  const imgB = blue(imgColor);
+  const imgG = green(imgColor);
+  
+  let minDistance = 999999;
+  let targetColor;
+  for(const c of palette){
+    const paletteR = red(c);
+    const paletteG = green(c);
+    const paletteB = blue(c);
+    const colorDistance = dist(imgR,imgG,imgB,paletteR,paletteG,paletteB);
+    if(colorDistance<minDistance){
+      targetColor = c;
+      minDistance = colorDistance;
+    }
+  }
+  return targetColor;
+} 
+
+function histograma(r,g,b,t){
+  stroke(255,0,0);
+  line(0,t,r/2,t);
+  stroke(0,255,0);
+  line(0,t,g/2,t);
+  stroke(0,0,255);
+  line(0,t,b/2,t);
+}
+
 {{< /p5-global-iframe >}}

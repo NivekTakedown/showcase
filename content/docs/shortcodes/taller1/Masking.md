@@ -209,9 +209,9 @@ function draw(){
   }
 }
 {{< /p5-global-iframe >}}
-## Masking
+## histograma
 
-Look at [this reference](https://en.wikipedia.org/wiki/Optical_illusion) for an explanation and further parameterization of the illusion.
+Look at [histograma](https://editor.p5js.org/crubioa/sketches/bpE30XhKL) for an explanation and further parameterization of the illusion.
 
 {{< details title="código moving picture" open=false >}}
 {{< highlight html >}}

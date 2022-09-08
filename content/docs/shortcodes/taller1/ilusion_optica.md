@@ -224,24 +224,35 @@ En este lugar se puede encontrar la ilusión óptica original: [this reference](
   }
 {{< /p5-global-iframe >}}
 
-## Prueba online
-{{< p5-widget autoplay=true height="400" width="400" ver="1.4.2" >}}
+## Estrella
+
+En este lugar se puede encontrar la ilusión óptica original: [this reference](https://www.alamy.es/ilustracion-grafica-3d-imagen-de-estrella-de-la-ilusion-optica-hecha-de-cuadrados-de-color-arco-iris-3d-image402311367.html) 
+
+{{< details title="código estrella" open=false >}}
+{{< highlight html >}}
+{{</* p5-global-iframe id="breath" width="625" height="625" >}}
+  // Coded as `global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js)
   let h;
   let w;
   let perc1;
   let perc2;
   let perc3;
+  let slider;
+  let slider1;
+  let slider2;
   function setup() {
     createCanvas(400, 400);
     h=float(0.9);
     w=float(width/2);
-    perc1=0.05;
-    perc2=0.0125;
-    perc3=0.1;
+    slider=createSlider(0, 0.5, 0.05, 0.01);
+    slider1=createSlider(0, 0.5, 0.0125, 0.01);
+    slider2=createSlider(0, 0.5, 0.01, 0.01);
   }
 
   function draw() {
-    background(220);
+    perc1 = slider.value();
+    perc2=slider1.value();
+    perc3=slider2.value();
     let num = 26;
     let num1 = 1;
     while (num > 0) {
@@ -258,4 +269,46 @@ En este lugar se puede encontrar la ilusión óptica original: [this reference](
       num1 = num1+ 7;
     }
   }
-{{< /p5-widget >}}
+{{< /p5-global-iframe */>}}
+{{< /highlight >}}
+{{< /details >}}
+
+{{< p5-global-iframe id="breath" width="400" height="400" >}}
+  let h;
+  let w;
+  let perc1;
+  let perc2;
+  let perc3;
+  let slider;
+  let slider1;
+  let slider2;
+  function setup() {
+    createCanvas(400, 400);
+    h=float(0.9);
+    w=float(width/2);
+    slider=createSlider(0, 0.5, 0.05, 0.01);
+    slider1=createSlider(0, 0.5, 0.0125, 0.01);
+    slider2=createSlider(0, 0.5, 0.01, 0.01);
+  }
+
+  function draw() {
+    perc1 = slider.value();
+    perc2=slider1.value();
+    perc3=slider2.value();
+    let num = 26;
+    let num1 = 1;
+    while (num > 0) {
+      if (num % 2==0) {
+        fill(0,0,0);
+      } else {
+        fill(255,255,255)
+      }
+      num = num - 1;
+      square(w*0.0125+w+perc1*w*num1/30,w*perc2+w+perc1*w*num1/30,w*h-num1);
+      square(-w*perc2+(1-h)*w+perc3*w*num1/30,+w*perc2+w+perc1*w*num1/30,w*h-num1);
+      square(w*perc2+w+perc1*w*num1/30,+w*0.085+perc3*w*num1/30,w*h-num1);
+      square(-w*perc2+(1-h)*w+perc3*w*num1/30,+w*0.085+perc3*w*num1/30,w*h-num1);
+      num1 = num1+ 7;
+    }
+  }
+{{< /p5-global-iframe >}}

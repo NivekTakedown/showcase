@@ -7,7 +7,6 @@ El valor de la imagen objetivo (matriz C) se calcula como la suma de todos los e
 
 Recordamos que el producto de Hadamard es una operación binaria que toma dos matrices de la misma dimensione y produce otra matriz de igual dimensión, donde cada elemento i , j es el producto de los elementos i , j de las dos matrices originales
 
-**Ejemplo gŕafico -** Operación de convolución de una imagen con el kernel de Sharpen:
 <img src="https://www.opto-e.com/basics/media/basics/software/3D_Convolution_Animation.gif" alt="Convolution" style="height: 390px; width:345px; margin: 30px auto; display: block;"/>
 
 Look at [this reference](https://en.wikipedia.org/wiki/Optical_illusion) for an explanation and further parameterization of the illusion.
@@ -360,3 +359,11 @@ function histograma(r,g,b,t){
 }
 
 {{< /p5-global-iframe >}}
+## **Referencias** 
+
+- [Making Filters Using p5.js!](https://idmnyu.github.io/p5.js-image/Filters/index.html)
+- [Kernel](https://www.opto-e.com/basics/kernel)
+- [convolution](https://github.com/CodingTrain/website-archive)
+- [Histograma](https://todo-fotografia.com/revelado/el-histograma/#:~:text=El%20histograma%20RGB%20es%20el,Rojo%2C%20Verde%20y%20Azul)
+- [filter](https://p5js.org/reference/#/p5/filter)
+Footer

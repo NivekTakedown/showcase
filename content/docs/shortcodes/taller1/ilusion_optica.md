@@ -274,7 +274,7 @@ En este lugar se puede encontrar la ilusión óptica original: [this reference](
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-global-iframe id="breath" width="400" height="600" >}}
+{{< p5-global-iframe id="breath" width="400" height="420" >}}
   
   let h;
   let w;

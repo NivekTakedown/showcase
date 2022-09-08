@@ -216,8 +216,7 @@ Look at [this reference](https://en.wikipedia.org/wiki/Optical_illusion) for an 
 {{< details title="código moving picture" open=false >}}
 {{< highlight html >}}
 {{</* p5-global-iframe id="breath" width="800" height="600" >}}
-  // Coded as `global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js)
-
+   https://editor.p5js.org/crubioa/sketches/bpE30XhKL
 {{< /p5-global-iframe */>}}
 {{< /highlight >}}
 {{< /details >}}
@@ -233,11 +232,11 @@ let tab2;
 let selec2;
 
 function preload(){
-    img1 = loadImage('/content/images/img1.jpg');
-    img2 = loadImage('/content/docs/images/img2.png');
-    img3 = loadImage('/content/docs/images/img3.jpeg');
-    img4 = loadImage('/content/docs/images/img4.png');
-    img5 = loadImage('/content/docs/images/imgp.png');
+    img1 = loadImage("showcase/content/images/img1.jpg");
+    img2 = loadImage("showcase/content/images/img2.jpg");
+    img3 = loadImage("showcase/content/images/img3.jpg");
+    img4 = loadImage("showcase/content/images/img4.jpg");
+    img5 = loadImage("showcase/content/images/imgp.jpg");
 }
 
 function setup() {

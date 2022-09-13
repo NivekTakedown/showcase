@@ -217,7 +217,7 @@ Un histograma de imagen, es un histograma que actúa como una representación gr
 Para mostrar el histograma seleccionamos la imagen con el botón browse, mostramos la imagen con el botón izquierda y mostramos el histograma con el botón derecha.
 
 
-{{< details title="código moving picture" open=false >}}
+{{< details title="código histograma" open=false >}}
 {{< highlight html >}}
 {{</* p5-global-iframe id="breath" width="800" height="600" >}}
   let input;

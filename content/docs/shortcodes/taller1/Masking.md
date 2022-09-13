@@ -210,7 +210,9 @@ function draw(){
 }
 {{< /p5-global-iframe >}}
 # histograma de imagen
+{{< hint info >}}
 Un histograma de imagen, es un histograma que actúa como una representación gráfica de la distribución de tonos en la imagen, nos dice la influencia de cada uno de los colores a lo largo de toda la imagen.
+{{< /hint >}}
  
 Para mostrar el histograma seleccionamos la imagen con el botón browse, mostramos la imagen con el botón izquierda y mostramos el histograma con el botón derecha.
 

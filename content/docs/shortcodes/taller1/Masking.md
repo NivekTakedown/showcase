@@ -926,3 +926,5 @@ function minRGB() {
 - [histograma](https://en.wikipedia.org/wiki/Image_histogram) 
 - [HCL Y HSL](https://editor.p5js.org/crubioa/sketches/xvobUY8TN)
 - [HCL Y HSL](https://editor.p5js.org/crubioa/sketches/3mh4enO4m) 
+- [HCL Y HSL](https://stackoverflow.com/questions/61018075/how-do-you-convert-the-colour-scheme-of-an-image-loaded-in-p5-js-from-rgb-which) 
+- [HCL Y HSL](https://www.peko-step.com/es/tool/hslrgb.html) 

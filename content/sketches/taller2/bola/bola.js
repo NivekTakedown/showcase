@@ -2,7 +2,7 @@ let inicio=0;
 
 let myFont;
 function preload() {
-  //myFont = loadFont('/showcase/sketches/taller2/assets/a.otf');
+  myFont = loadFont('/showcase/sketches/taller2/assets/a.otf');
 }
 //###estos datos se deben poder cambiar###
 let cam;
@@ -166,8 +166,8 @@ function juego(){
     push()
     translate(0,-50,z-60)
     textSize(30);
-    //textFont(myFont);
-    //text("tiempo:\n \t "+minutos+":"+segundos,-50,-50);
+    textFont(myFont);
+    text("tiempo:\n \t "+minutos+":"+segundos,-50,-50);
     pop()
     noLoop();
   }

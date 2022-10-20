@@ -64,13 +64,8 @@ function draw() {
 
   rotateX(HALF_PI);
   texture(img);
-  plane(800,1200); 
-  translate(0,400);
-  plane(800,1200); 
-  translate(0,-800);
-  plane(800,1200);
-  translate(0,-1200);
-  plane(800,1200);
+  plane(800,100000); 
+  
   //translate(0,carretera);
   //carretera=carretera-1200*8
   pop();

@@ -103,19 +103,19 @@ function juego(){
   //movimiento de la esfera segun las teclas
   if (keyIsPressed) {
     if (z>-(dis/2)){
-      if (keyCode == RIGHT_ARROW) {
+      if (keyCode == 68) {
        x+=5
        if (x==55){x=50;} //limite derecho de la pista
        else if ((figure==1)&&(x>=-25)&&((posinf>z)&&(posup<z))){x=-20} //comprubea parte derecha figura1
        else if ((figure==3)&&(x>=20)&&((posinf>z)&&(posup<z))){x=15} //comprubea parte derecha figura3
    }  
-    else if (keyCode == LEFT_ARROW) {
+    else if (keyCode == 65) {
        x-=5
        if (x===-55){x=-50;} //limite izquierdo de la pista
        else if ((figure==2)&&(x<=15)&&((posinf>z)&&(posup<z))){x=20}  //comprubea parte izquierda figura1
       else if ((figure==3)&&(x<=-20)&&((posinf>z)&&(posup<z))){x=-15} //comprubea parte derecha figura3
    }  
-    else if (keyCode == UP_ARROW) {
+    else if (keyCode == 87) {
       z-=5
       //empieza el reloj
       if (z==(dis/2)-5){

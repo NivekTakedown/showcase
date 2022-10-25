@@ -1,5 +1,4 @@
 let inicio=0;
-
 let myFont;
 function preload() {
   myFont = loadFont('/showcase/sketches/taller2/assets/a.otf');
@@ -64,6 +63,7 @@ function juego(){
   //###objeto###
   push();
   translate(x,-10,z);
+  noStroke();
   sphere(10);
   pop();
   

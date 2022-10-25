@@ -40,7 +40,7 @@ function draw() {
   translate(250, 0, 0);
 
   print('The value of x is ' +k);
-  if (accelerationX<0) {
+  if (keyIsPressed === true&&keyCode === RIGHT_ARROW) {
     if(i>-0.5)
       i=i-0.1
     else
@@ -53,7 +53,7 @@ function draw() {
     }
       
   }
-  if (accelerationX>0) {
+  if (keyIsPressed === true&&keyCode === LEFT_ARROW) {
     if(i<0.5)
       i=i+0.1
     else

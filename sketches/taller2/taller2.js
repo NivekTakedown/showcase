@@ -81,8 +81,6 @@ function draw() {
       movCar=-900+movCar;
     }
   }
-  
-  
   //translate(0,carretera);
   //carretera=carretera-1200*8
   pop();

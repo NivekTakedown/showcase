@@ -46,7 +46,6 @@ function pos(p){
 
 function setup(){
   createCanvas(700,700,WEBGL);
-  
   slider1 = createSlider(100,1700,600);
   slider1.position(10,20);
   slider2 = createSlider(10,40,20);

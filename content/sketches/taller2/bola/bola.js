@@ -47,13 +47,14 @@ function pos(p){
 function setup(){
   createCanvas(700,700,WEBGL);
   
-  slider1 = createSlider(100,3000,600);
+  slider1 = createSlider(100,1700,600);
   slider1.position(10,20);
   slider2 = createSlider(10,40,20);
   slider2.position(10,60);
   slider3 = createSlider(16,800,50);
   slider3.position(10,100);
   cam= createCamera();
+  
 }
 function juego(){
   background(175);
@@ -178,7 +179,15 @@ function juego(){
   translate(0,0);
   rotateX(HALF_PI);
   ambientMaterial(100);
-  plane(100,dis)
+  plane(100,dis);
+  push();
+  translate(50+ancho/2,0);
+  box(ancho,dis,30);
+  pop();
+  push();
+  translate(-50-ancho/2,0);
+  box(ancho,dis,30);
+  pop();
 
 }
 

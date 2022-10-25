@@ -5,15 +5,23 @@ let k=0;
 let img;
 let carretera=0;
 let myFont;
+let array=[];
+let movCar;
 function preload() {
   mustang = loadModel('/showcase/sketches/taller2/assets/ford_mustan_gt1967.obj');
   img = loadImage('/showcase/sketches/taller2/assets/pexels-life-of-pix-8892.jpg');
+  
 }
 
 function setup() {
+  
+  for (let a = 0; a < 10; a += 1) {
+    array[a]=-1200*a;
+  }
   createCanvas(710, 400, WEBGL);
   cam= createCamera();
-  cam.move(0,-100,0)
+  cam.move(0,-100,0);
+  movCar=0;
 }
 
 function draw() {
@@ -64,7 +72,16 @@ function draw() {
 
   rotateX(HALF_PI);
   texture(img);
-  plane(800,100000); 
+  for (let a = 0; a < 10; a += 1) {
+    push();
+    translate(0,array[a]+movCar);
+    plane(800,1200); 
+    pop();
+    if((frameCount%(60*15.3)==0)){
+      movCar=-900+movCar;
+    }
+  }
+  
   
   //translate(0,carretera);
   //carretera=carretera-1200*8

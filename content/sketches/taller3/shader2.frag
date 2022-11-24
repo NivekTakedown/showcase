@@ -17,13 +17,13 @@ float plot(vec2 st, float pct){
 }//tomado de https://thebookofshaders.com/
 
 void main() {
-    float a=5.0;
+    float a=2.75;
   float time= 9.0;
     vec2 st = gl_FragCoord.xy/u_resolution;
     float x=st.x*(a+sin(u_time*time))-2.2-(-(cos(u_time*time)));
     // Smooth interpolation between 0.1 and 0.9
-    float y = 0.39+(sqrt(-x*x+1.0)+pow(x*x, 1.0/ 3.0))/(a+sin(u_time*time));
-	float z = 0.4+(-sqrt(-x*x+1.0)+pow(x*x, 1.0/ 3.0))/(a+sin(u_time*time));
+    float y = 0.89+(sqrt(-x*x+1.0)+pow(x*x, 1.0/ 3.0))/(a+sin(u_time*time));
+	float z = 0.9+(-sqrt(-x*x+1.0)+pow(x*x, 1.0/ 3.0))/(a+sin(u_time*time));
     vec3 color = vec3(y);
 
     float pct = plot(st,y);

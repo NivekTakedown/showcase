@@ -17,7 +17,7 @@ float plot(vec2 st, float pct){
 }//tomado de https://thebookofshaders.com/
 
 void main() {
-    float a=2.75;
+  float a=2.75;
   float time= 9.0;
     vec2 st = gl_FragCoord.xy/u_resolution;
     float x=st.x*(a+sin(u_time*time))-2.2-(-(cos(u_time*time)));

@@ -333,12 +333,168 @@ void main() {
 
 {{< /highlight >}}
 {{< /details >}}
+
 {{< p5-iframe sketch="/showcase/sketches/taller3/sketch.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" lib2="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js" lib3="https://freshfork.github.io/p5.EasyCam/p5.easycam.js" lib4="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js"  width="800" height="600" >}}
 
 
-# Pixelator
-para mover el vehículo hacia la izquierda oprimimos la tecla izquierda y para moverlo a la derecha la derecha, el vehículo se mueve automáticamente hacia adelante.
+# pixelator
+La coherencia es parcial es el fenómeno visual en el que los colores varían dependiendo de la distancia de la que se está observando, entre mayor distancia hay entre puntos es más probable que los colores de estos difieran.
+En este ejercicio, se diseñará un pixelator, esta es una técnica que se encarga de reducir la resolución de una imagen (La resolución de una imagen indica la cantidad de detalles que puede observarse en esta), sin perder la coherencia (forma y diseño). Esto es posible, gracias a que las imágenes están creadas en un mapa de bits. 
+La vectorización primero crea una representación vectorial independiente de la resolución del gráfico que se va a escalar, guardando la posición de cada píxel. Digamos que tengo una imagen que quiero "pixelar". Quiero esta imagen nítida representada por una cuadrícula de, digamos, 100 x 100 cuadrados. Entonces, si la foto original es de 500 px X 500 px, cada cuadrado es de 5 px X 5 px. Entonces, cada cuadrado tendría un color correspondiente al grupo de píxeles de 5 px X 5 px por el que se intercambia. El escalado de imágenes se puede interpretar como una forma de remuestreo de imágenes o reconstrucción de imágenes 
+
+{{< details title="código fragment shader pixelator" open=false >}}
+{{< highlight html >}}
+
+
+
+
+precision mediump float;
+
+varying vec2 vTexCoord;
+
+uniform sampler2D tex0;
+uniform float tiles;
+
+void main() {
+
+  vec2 uv = vTexCoord;
+  uv = 1.0 - uv;
+  uv = floor(uv * tiles)/tiles;
+  vec4 tex = texture2D(tex0, uv);
+  gl_FragColor = tex;
+
+  //ver cambio en la textura
+  //gl_FragColor = vec4(uv.x, uv.y, 0.0, 1.0);
+}
+
+
+
+
+
+
+{{< /highlight >}}
+{{< /details >}}
+
+{{< details title="código vertex shader pixelator" open=false >}}
+{{< highlight html >}}
+
+
+
+
+attribute vec3 aPosition;
+attribute vec2 aTexCoord;
+
+varying vec2 vTexCoord;
+
+void main() {
+  vTexCoord = aTexCoord;
+
+  vec4 positionVec4 = vec4(aPosition, 1.0);
+  positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
+
+  gl_Position = positionVec4;
+}
+
+
+
+
+{{< /highlight >}}
+{{< /details >}}
+
+{{< details title="código software js pixelator" open=false >}}
+{{< highlight html >}}
+
+
+
+let imgShader;
+let resolution;
+let img1; let img2; let img3; let img4; let img5;
+
+let tab; //menu de seleccion
+let selec;
+
+function pickEvent() {
+    selec = tab.value();    
+    if (selec === '-anya') {
+        selec = 1;
+    } else if (selec === '-goku') {
+        selec = 2;
+    } else if (selec === '-naruto') {
+        selec = 3;
+    } else if (selec === '-konosuba') {
+        selec = 4;
+    } else if (selec === '-shawson') {
+        selec = 5;
+    } 
+}
+
+function preload(){
+  imgShader = loadShader('/showcase/sketches/taller3/pixelator/effect.vert', '/showcase/sketches/taller3/pixelator/effect.frag');
+  img1 = loadImage("/showcase/sketches/taller3/pixelator/anya.jpg");
+  img2 = loadImage("/showcase/sketches/taller3/pixelator/goku.jpg");
+  img3 = loadImage("/showcase/sketches/taller3/pixelator/naruto.jpg");
+  img4 = loadImage("/showcase/sketches/taller3/pixelator/konosuba.jpg");
+  img5 = loadImage("/showcase/sketches/taller3/pixelator/shawson.jpg");
+
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight, WEBGL);  
+  textureMode(NORMAL);
+  tab= createSelect();
+  tab.position(10, 10);
+  tab.option('Pixel');
+  tab.option('-anya');
+  tab.option('-goku');
+  tab.option('-konosuba');
+  tab.option('-naruto');
+  tab.option('-shawson');
+  tab.changed(pickEvent);
+  noStroke();
+  shader(imgShader);
+  resolution = createSlider(1, 300, 20, 1);
+  resolution.position(10, 35);
+  resolution.style('width', '80px');
+  resolution.input(() => imgShader.setUniform('resolution', resolution.value()));
+}
+
+function draw() {  
+  if (selec == 1){
+    imgShader.setUniform('tex0', img1);
+  } else if (selec == 2){
+    imgShader.setUniform('tex0', img2);
+  } else if (selec == 3){
+    imgShader.setUniform('tex0', img3);
+  } else if (selec == 4){
+    imgShader.setUniform('tex0', img4);
+  } else if (selec == 5){
+    imgShader.setUniform('tex0', img5);
+  }
+
+  imgShader.setUniform('tiles', float(resolution.value()));
+
+  rect(0,0,width, height);
+  
+}
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+
+
+
+{{< /highlight >}}
+{{< /details >}}
 {{< p5-iframe sketch="/showcase/sketches/taller3/pixelator/sketch.js" lib1="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js" lib2="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js" width="800" height="800" >}}
+
+# conclusiones
+- Una textura procedural se puede utilizar para modelar superficies volumétricas de elementos naturales, en videojuegos.
+- la geometría no euclidiana es un  concepto más difícil de entender  que de implementar
+Los núcleos de la GPU no tienen memoria y no pueden saber lo que hacen otros núcleos, la información que utilizan para dibujar son las uniforms que es igual para todos y las varying que es la información que varía  de uno a otro.
+- El escalado de imágenes es esencial como una de sus aplicaciones ya que es necesaria para el zoom
+- debido a que en un inicio los equipos no podían sostener una gran capacidad gráfica, se decidió recurrir al pixel art, como principal forma de generar una interfaz, hoy en día debido a su facilidad y bajo coste computacional, es una gran herramienta para desarrolladores y artistas
+
 ## **Referencias** 
 - [book of shaders](https://thebookofshaders.com/)
 - [Geometría no euclidiana](https://es.wikipedia.org/wiki/Geometr%C3%ADa_no_euclidiana)
@@ -347,4 +503,7 @@ para mover el vehículo hacia la izquierda oprimimos la tecla izquierda y para m
 - [dio-wry-pose model](https://sketchfab.com/3d-models/dio-wry-pose-5dab629697204550af955b9994507923)
 - [metal-gear-rex model](https://sketchfab.com/3d-models/metal-gear-rex-7078266ac0e7463db9093e0bbf9c59b1#download)
 - [mario model](https://sketchfab.com/3d-models/super-mario-64-rigged-and-fixed-textures-c4016c4356e94a3cac7e54f5c7e5eb61)
-- [Procedural texturing](https://visualcomputing.github.io/docs/shaders/procedural_texturing/)
+- [Image_scaling](https://en.wikipedia.org/wiki/Image_scaling)
+- [Imagen_de_mapa_de_bits](https://es.wikipedia.org/wiki/Imagen_de_mapa_de_bits)
+
+

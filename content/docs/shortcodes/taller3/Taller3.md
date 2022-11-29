@@ -23,6 +23,14 @@ Para la solución de este ejercicio se adaptó un código del libro book of shad
 x^{2}+\left ( y-  \sqrt[3]{x^{2}} \right )^{2}= 1
 {{< /katex >}}
 
+Esta representación no la podemos escribir en el fragment shader, esto porque podemos asignar una sola variable al tiempo. para solucionar este problemas se divide la ecuación en dos y queda como sigue:
+
+
+{{< katex display >}}
+y=\sqrt{1-x^2}+\sqrt[3]{x^2},\:y=-\sqrt{1-x^2}+\sqrt[3]{x^2} 
+{{< /katex >}}
+
+
 
 {{< details title="código software js" open=false >}}
 {{< highlight html >}}
@@ -332,7 +340,11 @@ void main() {
 para mover el vehículo hacia la izquierda oprimimos la tecla izquierda y para moverlo a la derecha la derecha, el vehículo se mueve automáticamente hacia adelante.
 {{< p5-iframe sketch="/showcase/sketches/taller3/pixelator/sketch.js" lib1="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js" lib2="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js" width="800" height="800" >}}
 ## **Referencias** 
-- [Movimiento mientras se presiona una tecla](https://editor.p5js.org/Viv-Galinari/sketches/SJncLkliW)
-- [Modelo mustan](https://www.cgtrader.com/items/2226459/download-page)
-- [Textura caretera](https://www.pexels.com/es-es/foto/roca-gris-8892/)
-Footer
+- [book of shaders](https://thebookofshaders.com/)
+- [Geometría no euclidiana](https://es.wikipedia.org/wiki/Geometr%C3%ADa_no_euclidiana)
+- [crash-bandicoot model](https://sketchfab.com/3d-models/crash-bandicoot-442556bf988345afbbdc1f398c169a30#download)
+- [Tails model]( https://sketchfab.com/3d-models/tails-obj-free-3d-model-7a79162d7da14bf49fc194f8cc9322f8)
+- [dio-wry-pose model](https://sketchfab.com/3d-models/dio-wry-pose-5dab629697204550af955b9994507923)
+- [metal-gear-rex model](https://sketchfab.com/3d-models/metal-gear-rex-7078266ac0e7463db9093e0bbf9c59b1#download)
+- [mario model](https://sketchfab.com/3d-models/super-mario-64-rigged-and-fixed-textures-c4016c4356e94a3cac7e54f5c7e5eb61)
+- [Procedural texturing](https://visualcomputing.github.io/docs/shaders/procedural_texturing/)

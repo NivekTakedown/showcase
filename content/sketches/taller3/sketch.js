@@ -25,8 +25,8 @@ function preload() {
                          { varyings: Tree.NONE });
   miShader = readShader('/showcase/sketches/taller3/shader2.frag',
                          { varyings: Tree.NONE });
-  teapot = loadModel('/showcase/sketches/taller3/teapot.obj', true);
-  bunny = loadModel('/showcase/sketches/taller3/bunny.obj', true);
+  teapot = loadModel('/showcase/sketches/taller3/bunny.obj', true);
+  bunny = loadModel('/showcase/sketches/taller3/rex.obj', true);
   tails = loadModel('/showcase/sketches/taller3/Tails.obj', true);
   crash = loadModel('/showcase/sketches/taller3/crash.obj', true);
   dio = loadModel('/showcase/sketches/taller3/dio.obj', true);
@@ -96,7 +96,7 @@ function draw() {
                    up.x, up.y, up.z);
   teapotTex.push();
   teapotTex.noStroke();
-  teapotTex.fill('blue');
+  teapotTex.fill('gray');
   teapotTex.scale(1, -1);
   teapotTex.model(teapot);
   teapotTex.pop();

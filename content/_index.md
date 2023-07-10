@@ -7,4 +7,3 @@ type: docs
 
 Kevin Fabio Ramos López
 
-Carlos Eduardo Rubio Arteaga

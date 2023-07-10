@@ -1,6 +1,6 @@
 baseURL = "https://nivektakedown.github.io/showcase"
 languageCode = "en-us"
-title = "Showcase Template"
+title = "Portfolio"
 theme = 'book'
 
 # Book configuration

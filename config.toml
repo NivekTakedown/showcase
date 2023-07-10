@@ -1,4 +1,4 @@
-baseURL = "https://nivektakedown.github.io/Portfolio"
+baseURL = "https://nivektakedown.github.io/showcase"
 languageCode = "en-us"
 title = "Portfolio"
 theme = 'book'

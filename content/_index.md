@@ -48,7 +48,7 @@ Although my professional experience is currently limited, I have gained valuable
 Here are some of my notable projects:
 
 - [Marvel comic keeper](docs/shortcodes/Proyects/marvelcomickeeper/): Marvel Comic Keeper is a application that seamlessly connects to the Marvel API. Users can create accounts, explore Marvel comics, and effortlessly manage their favorites. Built with Express.js and React, along with MySQL for the database, it delivers a seamless and interactive user experience. Deployment is handled by Netlify for the frontend and Railway for the backend and database.
-
+- [EasyCoffee](docs/shortcodes/Proyects/EasyCoffee/): The Easy Coffee App streamlines coffee plantation management for owners and workers. It facilitates registration of farm details, tracks production and sales, monitors inventory, records daily progress, and offers geospatial lot maps.
 ## **Contact**
 
-Feel free to reach out to me at [Email Address](mailto:kramosl@unal.edu.co) or connect with me on <a href="https:www.linkedin.com/in/kevin-fabio-ramos-lopez-300401250" target="_blank">LinkedIn Profile</a> for any inquiries or collaboration opportunities. Let's work together to create innovative solutions!
+Feel free to reach out to me at [Email Address](mailto:kramosl@unal.edu.co) or connect with me on <a href="https://www.linkedin.com/in/kevin-fabio-ramos-lopez-300401250" target="_blank">LinkedIn Profile</a> for any inquiries or collaboration opportunities. Let's work together to create innovative solutions!

@@ -66,7 +66,8 @@ The app has different user roles like an admin who has full access and auxiliary
     techManualEmbed.style.display = "block";
   });
 </script>
+This project was developed in collaboration with three other team members.
+asdasdas
+## **Prototipe**  
 
-## **Prototipe**
-
-iIf you're interested in trying out the EasyCoffe app, you can download the executable file by clicking on the following  <a href="/showcase/sketches/files/EasyCoffee.exe">link</a>
+If you're interested in trying out the EasyCoffee app, you can download the executable file by clicking on the following [link](/showcase/sketches/files/EasyCoffee.exe). 

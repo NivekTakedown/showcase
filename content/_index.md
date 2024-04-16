@@ -46,7 +46,7 @@ I focus on problem solving, SQL, back-end development and agile methodologies su
 Here are some of my notable projects:
 
 - [Marvel comic keeper](docs/shortcodes/Proyects/marvelcomickeeper/): Marvel Comic Keeper is a application that seamlessly connects to the Marvel API. Users can create accounts, explore Marvel comics, and effortlessly manage their favorites. Built with Express.js and React, along with MySQL for the database, it delivers a seamless and interactive user experience. Deployment is handled by Netlify for the frontend and Railway for the backend and database.
-- [EasyCoffee](docs/shortcodes/Proyects/EasyCoffe/): The Easy Coffee App streamlines coffee plantation management for owners and workers. It facilitates registration of farm details, tracks production and sales, monitors inventory, records daily progress, and offers geospatial lot maps.  This project was developed in collaboration with three other team members.
+- [EasyCoffee](docs/shortcodes/Proyects/EasyCoffee/): The Easy Coffee App streamlines coffee plantation management for owners and workers. It facilitates registration of farm details, tracks production and sales, monitors inventory, records daily progress, and offers geospatial lot maps.  This project was developed in collaboration with three other team members.
 
 ## **Contact**
 

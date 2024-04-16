@@ -1,4 +1,4 @@
-# **EasyCoffe**
+# **EasyCoffee**
 
 The Easy Coffee App is designed to help coffee farm owners and workers manage various aspects of their coffee plantation. It allows users to:
 

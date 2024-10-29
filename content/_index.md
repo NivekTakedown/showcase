@@ -1,57 +1,63 @@
 ---
-title:  Junior software developer
+title:  Junior Software Developer
 type: docs
 ---
 
 # **Kevin Fabio Ramos López**
 
-Junior software developer | Problem-solving | Backend development
+Junior Software Developer | Problem-solving | Backend Development
 
 ## **Introduction**
 
-I focus on problem solving, SQL, back-end development and agile methodologies such as Scrum. With interest in Machine Learning. I am characterized by my commitment to project development, my ability to learn and my adaptability. With experience as a junior engineer. The values that represent me are the sense of belonging, tolerance and trust.
- 
+Systems Engineer focused on back-end development, with experience in SQL, agile methodologies, and Machine Learning. Known for strong problem-solving skills, quick learning, and adaptability. Committed to developing innovative projects, valuing teamwork and continuous improvement.
 
 ## **Skills**
 
-- Backend Development (Python)
-- Problem Solving
-- API Development (Django)
-- Database Management (MySQL, MongoDB)
-- Agile Methodologies
-
-
+- **Languages:** Python, Java, SQL (MySQL), JavaScript
+- **Databases:** MongoDB, Elasticsearch, Firebase
+- **Version Control:** Git
+- **CI/CD:** GitHub Actions
+- **Frameworks:** Django, Node.js, Spring Boot
+- **Methodologies:** Agile (Scrum), TDD
 
 ## **Education**
 
-- Bachelor's Degree in Systems and Computer Engineering (Expected Graduation: January 2024)
-  - Universidad Nacional de Colombia
-
-
-
+- **Bachelor's Degree in Systems and Computer Engineering** (Expected Graduation: June 2025)
+  - National University of Colombia, Bogotá
+  - Relevant coursework: Algorithms, Parallel and Distributed Computing, Machine Learning, Software Engineering
+  - GPA: 3.8/5.0
 
 ## **Experience**
 
-* **[LAB101](https://www.linkedin.com/company/lab101-unal/) | Bogotá D.C  29/11/2023 to current** 
-  * Actively collaborated in team-based agile methodologies to construct a Django application and transition the business logic.
-  * Utilized Django, Python, MongoDB, and Strapi to add features an API and feed a CMS.
+* **Software Developer | [LAB101](https://www.linkedin.com/company/lab101-unal/) | Bogotá, Colombia | 11/2023 – Present**
+  * Designed a Django and MongoDB-based application for Findeter, implementing the core debt capacity calculation feature.
+  * Created a Python web scraping algorithm, reducing data migration time from two weeks to 39 minutes.
+  * Leading the development of a Strapi search plugin using Node.js and Elasticsearch.
+  * Implemented a CI pipeline with GitHub Actions for detecting critical changes.
 
-
-
-
-
+* **Development Analyst | Innovbo Group | Bogotá, Colombia | 04/2024 – 08/2024**
+  * Developed a Java and Firebase microservice for transport load recommendations.
+  * Implemented unit testing and error handling, achieving 95% code coverage.
+  * Collaborated in a team of 3 developers, delivering 2 major feature releases ahead of schedule.
 
 ## **Projects**
 
 Here are some of my notable projects:
 
-- [Marvel comic keeper](docs/shortcodes/Proyects/marvelcomickeeper/): Marvel Comic Keeper is a application that seamlessly connects to the Marvel API. Users can create accounts, explore Marvel comics, and effortlessly manage their favorites. Built with Express.js and React, along with MySQL for the database, it delivers a seamless and interactive user experience. Deployment is handled by Netlify for the frontend and Railway for the backend and database.
-- [EasyCoffee](docs/shortcodes/Proyects/EasyCoffee/): The Easy Coffee App streamlines coffee plantation management for owners and workers. It facilitates registration of farm details, tracks production and sales, monitors inventory, records daily progress, and offers geospatial lot maps.  This project was developed in collaboration with three other team members.
+- **[Marvel Comic Keeper](docs/shortcodes/Proyects/marvelcomickeeper/):** Marvel Comic Keeper is an application that seamlessly connects to the Marvel API. Users can create accounts, explore Marvel comics, and effortlessly manage their favorites. Built with Express.js and React, along with MySQL for the database, it delivers a seamless and interactive user experience. Deployment is handled by Netlify for the frontend and Railway for the backend and database.
+- **[EasyCoffee](docs/shortcodes/Proyects/EasyCoffee/):** The Easy Coffee App streamlines coffee plantation management for owners and workers. It facilitates registration of farm details, tracks production and sales, monitors inventory, records daily progress, and offers geospatial lot maps. This project was developed in collaboration with three other team members.
+- **[HTML to JSON Blocks Library](docs/shortcodes/Proyects/EasyCoffee/):** Developed a Python library to convert HTML content into structured JSON blocks. Implemented a modular design with custom image handling capabilities. Technologies: Python, HTML, JSON, BeautifulSoup.
+
+## **Languages**
+
+- **Spanish:** Native proficiency
+- **English:** Professional working proficiency (B1)
 
 ## **Contact**
 
 If you're interested in collaborating or just want to say hi, I'd love to hear from you! Here's how you can reach me:
 
-- Email: [kramosl@unal.edu.co](mailto:kramosl@unal.edu.co)
+- Email: [kevinframosl@gmail.com](mailto:kevinframosl@gmail.com)
+- Phone: +57 313 285 90 51
 - LinkedIn: [Kevin Fabio Ramos Lopez](https://www.linkedin.com/in/kevin-fabio-ramos-lopez-300401250)
-- GitHub: [GitHub Profile](https://github.com/NivekTakedown) 
+- GitHub: [GitHub Profile](https://github.com/NivekTakedown)
